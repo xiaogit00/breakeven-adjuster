@@ -1,0 +1,44 @@
+[
+    {
+        "order_id": 3,
+        "status": "NEW",
+        "direction": "LONG",
+        "symbol": "SOLUSDT",
+        "order_type": "STOP_ORDER",
+        "ask_price": 173.3,
+        "filled_price": 169.5,
+        "side": "BUY",
+        "created_at": "2025-05-26T14:00:00",
+        "updated_at": "2025-05-26T15:00:00",
+        "order_groups": {
+            "side": "LONG",
+            "type": "MO",
+            "group_id": 1,
+            "order_id": 3,
+            "created_at": "2025-05-26T15:00:00",
+            "breakeven_price": 168,
+            "breakeven_threshold": 162
+        }
+    },
+    {
+        "order_id": 7,
+        "status": "NEW",
+        "direction": "LONG",
+        "symbol": "SOLUSDT",
+        "order_type": "STOP_ORDER",
+        "ask_price": 173.3,
+        "filled_price": 169.5,
+        "side": "BUY",
+        "created_at": "2025-05-26T14:00:00",
+        "updated_at": "2025-05-26T15:00:00",
+        "order_groups": {
+            "side": "LONG",
+            "type": "MO",
+            "group_id": 2,
+            "order_id": 7,
+            "created_at": "2025-05-26T15:00:00",
+            "breakeven_price": 168,
+            "breakeven_threshold": 162
+        }
+    }
+]
