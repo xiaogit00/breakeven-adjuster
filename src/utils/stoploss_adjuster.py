@@ -78,9 +78,13 @@ def set_stop_loss(symbol, side, stop_price, quantity):
         raise
 
 
-def adjust_SL(orderid, symbol, side, stop_price, quantity, group_id):
+def adjust_SL(orderid, symbol, side, breakeven_price, quantity, group_id):
+    # orderid: previous stoploss orderid
+    # symbol: set default to "SOLUSDT"
+    # side: "BUY"/"SELL"
+
     cancel_stop_market_orders(symbol, orderid)
-    new_stoploss = set_stop_loss(symbol, side, stop_price, quantity)
+    new_stoploss = set_stop_loss(symbol, side, breakeven_price, quantity)
     stoploss_order_id = new_stoploss['orderId']
 
     data_side = "LONG" if side == "SELL" else "SHORT"
