@@ -1,12 +1,16 @@
-import requests
+import requests, os
 import time
+supabase_url = os.getenv("SUPABASE_URL")
+supbase_api_key = os.getenv("SUPABASE_API_KEY")
+supabase_jwt = os.getenv("SUPABASE_JWT")
 
-def log_into_supabase(data, supabase_url, api_key, jwt, table_name="order_groups"):
+
+def log_into_supabase(data, table_name="order_groups"):
     
     url = f"{supabase_url}/rest/v1/{table_name}"
     headers = {
-        "apikey": api_key,
-        "Authorization": f"Bearer {jwt}",
+        "apikey": supbase_api_key,
+        "Authorization": f"Bearer {supabase_jwt}",
         "Content-Type": "application/json",
         "Prefer": "return=representation"
     }

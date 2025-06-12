@@ -1,0 +1,107 @@
+[
+    {
+        "order_id": 122522607237,
+        "status": "NEW",
+        "direction": "LONG",
+        "symbol": "SOLUSDT",
+        "order_type": "STOP_ORDER",
+        "ask_price": 173.3,
+        "filled_price": 169.5,
+        "side": "BUY",
+        "qty": 0.009,
+        "created_at": "2025-05-26T14:00:00",
+        "updated_at": "2025-05-26T15:00:00",
+        "order_group": {
+            "group_id": 0,
+            "order_id": 122522607237,
+            "type": "SL",
+            "direction": "SHORT",
+            "breakeven_threshold": 168.24,
+            "breakeven_price": 168.15,
+            "created_at": "2025-06-11T14:35:01.976877"
+        }
+    },
+    {
+        "order_id": 122557496623,
+        "status": "NEW",
+        "direction": "LONG",
+        "symbol": "SOLUSDT",
+        "order_type": "STOP_ORDER",
+        "ask_price": 169.3,
+        "filled_price": 169.5,
+        "side": "BUY",
+        "qty": 0.009,
+        "created_at": "2025-05-26T14:00:00",
+        "updated_at": "2025-05-26T14:00:00",
+        "order_group": {
+            "group_id": 3,
+            "order_id": 122557496623,
+            "type": "SL",
+            "direction": "LONG",
+            "breakeven_threshold": 164.45,
+            "breakeven_price": 164.54,
+            "created_at": "2025-06-11T17:50:04.644408"
+        }
+    }
+]
+
+[
+    {
+        "order_id": 122683492013,
+        "status": "NEW",
+        "direction": "LONG",
+        "symbol": "SOLUSDT",
+        "order_type": "STOP_MARKET",
+        "ask_price": 152.02,
+        "filled_price": None,
+        "side": "SELL",
+        "qty": 0.009,
+        "created_at": "2025-06-12T15:36:51.438",
+        "updated_at": None,
+        "order_group": {
+            "group_id": 0,
+            "order_id": 122683492013,
+            "type": None,
+            "direction": None,
+            "breakeven_threshold": 168,
+            "breakeven_price": 150,
+            "created_at": "2025-06-12T15:37:28"
+        }
+    },
+    {
+        "order_id": 122686581113,
+        "status": "NEW",
+        "direction": "LONG",
+        "symbol": "SOLUSDT",
+        "order_type": "STOP_MARKET",
+        "ask_price": 155,
+        "filled_price": None,
+        "side": "SELL",
+        "qty": 0.09,
+        "created_at": "2025-06-12T15:56:21.621",
+        "updated_at": None,
+        "order_group": {
+            "group_id": 0,
+            "order_id": 122686581113,
+            "type": None,
+            "direction": None,
+            "breakeven_threshold": 175,
+            "breakeven_price": 150,
+            "created_at": "2025-06-12T18:35:29"
+        }
+    },
+    {
+        "order_id": 122687153005,
+        "status": "NEW",
+        "direction": "LONG",
+        "symbol": "SOLUSDT",
+        "order_type": "STOP_MARKET",
+        "ask_price": 150,
+        "filled_price": None,
+        "side": "SELL",
+        "qty": 0.09,
+        "created_at": "2025-06-12T16:00:40.112",
+        "updated_at": None,
+        "order_group": None
+    }
+]
