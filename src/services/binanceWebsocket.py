@@ -6,7 +6,7 @@ listen_key = None
 
 load_dotenv()
 
-async def websocket_binance_price_listener(binance_price_queue: asyncio.Queue, interval=10):
+async def websocket_binance_price_listener(binance_price_queue: asyncio.Queue, interval=10): # interval = seconds
     ws_url = f"wss://fstream.binance.com/ws/solusdt@ticker"
     logging.info(f"Connecting to {ws_url}")
 
