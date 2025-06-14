@@ -9,6 +9,7 @@ supabase = get_supabase_client()
 
 def get_open_SL_orders():
     """Returns open SL orders with their groups info in 'order_groups' field. """
+    logging.info("Trying to get open SL orders from DB...")
     try:
         orders_resp = supabase.table("orders") \
             .select("*") \
@@ -28,7 +29,7 @@ def get_open_SL_orders():
             {**order, "order_group": group_map.get(order['order_id'])}
             for order in orders
         ]
-
+        logging.info(f"Retrived open SL orders: {orders_with_groups}")
         return orders_with_groups
     except Exception as e: 
         print("There's an issue getting one order from supabase: ", e)

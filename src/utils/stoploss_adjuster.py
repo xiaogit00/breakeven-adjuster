@@ -43,14 +43,17 @@ def adjust_SL_orders(adjustment_orders):
             logging.error(f"Failed to log NEW STOPLOSS trade to Supabase: {e}")
 
 def check_for_SL_adjustments(open_sl_orders, close_price) -> list: #TO-DO
+    logging.info("Checking whether SL orders hit close price with params: ")
+    logging.info(f'open_sl_orders: {open_sl_orders}')
+    logging.info(f'close_price: {close_price}')
     adjustments = []
     for order in open_sl_orders:
         direction = order['direction']
         if direction == "LONG":
-            if close_price > order['order_group']['breakeven_threshold']:
+            if close_price > float(order['order_group']['breakeven_threshold']):
                 adjustments.append(order)
         elif direction == "SHORT":
-            if close_price < order['order_group']['breakeven_threshold']:
+            if close_price < float(order['order_group']['breakeven_threshold']):
                 adjustments.append(order)
     # If direction is LONG, then 
     return adjustments
