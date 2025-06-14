@@ -18,7 +18,7 @@ def init_logger():
     )
 
     # File handler
-    file_handler = logging.FileHandler('bot.log', mode='a')
+    file_handler = logging.FileHandler('breakeven_adjuster.log', mode='a')
     file_handler.setFormatter(formatter)
     file_handler.setLevel(logging.INFO)
 
