@@ -128,7 +128,7 @@ def enrich_order(order) -> dict | None:
         return None
         
 
-def insertNewCandle(candle_price, new_SL_order_id, group_id, trade_metadata):
+def insertNewCandle(candle_price, new_SL_order_id, group_id, trade_metadata, actual_entry_price):
     logging.info(f"OrderID: {new_SL_order_id} | Inserting candle data into candles table: {candle_price}")
     logging.info(f"Trade Metadata: {trade_metadata}")
 
@@ -136,7 +136,8 @@ def insertNewCandle(candle_price, new_SL_order_id, group_id, trade_metadata):
         "order_id": new_SL_order_id,
         "group_id": group_id,
         "candle_data": candle_price,
-        "trade_metadata": trade_metadata
+        "trade_metadata": trade_metadata,
+        "actual_entry_price": actual_entry_price
     }
     
     try:

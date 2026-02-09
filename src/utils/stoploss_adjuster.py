@@ -26,7 +26,7 @@ def adjust_SL_order(order_enriched, candle_price):
         new_stoploss_order = binanceREST.execute_stop_loss_algo_order(symbol, side, next_stoploss_price, qty)
         new_SL_order_id = new_stoploss_order.get('algoId')
     assert new_SL_order_id is not None, f"Could not get the new SL order ID for order: {new_stoploss_order}"
-    db.insertNewCandle(json.dumps(candle_price), new_SL_order_id, group_id, order_enriched['candle_data']['trade_metadata'])
+    db.insertNewCandle(json.dumps(candle_price), new_SL_order_id, group_id, order_enriched['candle_data']['trade_metadata'], order_enriched['candle_data']['actual_entry_price'])
     logging.info(f"✅ Successfully adjusted SL for order: {order_id}. New SL order: {new_SL_order_id}")
 
 def check_for_SL_adjustment(order_enriched, close_price) -> bool: #TO-DO
